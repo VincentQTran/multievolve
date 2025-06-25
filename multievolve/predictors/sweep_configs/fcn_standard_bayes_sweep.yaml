@@ -1,0 +1,18 @@
+program: train.py
+method: bayes
+metric:
+ name: Test Loss
+ goal: minimize
+parameters:
+ layer_size:
+   value: 100
+ num_layers:
+   values: [1, 2, 3, 4, 5]
+ learning_rate:
+   values: [0.0001, 0.001, 0.01]
+ batch_size:
+   values: [4, 8, 16, 32]
+ optimizer:
+   value: "adam"
+ epochs:
+   value: 300
