@@ -5,7 +5,7 @@ This app provides an interactive web app to:
 1. Train neural network models on protein mutation data
 2. Propose optimized multi-mutant combinations
 3. Generate MULTI-assembly mutagenic oligos for gene synthesis
-4. Perform zeroshot predictions with protein language models
+4. Perform zero-shot predictions with protein language models
 """
 
 import streamlit as st
@@ -488,8 +488,8 @@ def design_oligos():
             st.exception(e)
 
 def zeroshot_predictions():
-    """Perform zeroshot predictions section"""
-    # st.header("Perform Protein Language Model Zeroshot Ensemble")
+    """Perform zero-shot predictions section"""
+    # st.header("Perform Protein Language Model Zero-shot Ensemble")
     
     col1, col2 = st.columns([1,1])
 
@@ -504,9 +504,9 @@ def zeroshot_predictions():
     
     with col2:
         st.markdown("""
-        ### MULTI-evolve: Protein Language Model Zeroshot Ensemble
+        ### MULTI-evolve: Protein Language Model Zero-shot Ensemble
                     
-        This tool performs zeroshot predictions with a protein language model ensemble to nominate mutations.
+        This tool performs zero-shot predictions with a protein language model ensemble to nominate mutations.
         
         #### Input Files and Parameters
         
@@ -525,7 +525,7 @@ def zeroshot_predictions():
         - `plm_zeroshot_ensemble_nominated_mutations.csv`: List of proposed variants and nominating methods.
         """)
         
-    if st.button("Run Zeroshot Predictions"):
+    if st.button("Run Zero-shot Predictions"):
         if not all([protein_name, wt_file_aa, pdb_files, chain_id]):
             st.error("Please fill in all required fields")
             return
@@ -576,7 +576,7 @@ def zeroshot_predictions():
             with st.container():
                 terminal_output = st.empty()
 
-            with st.spinner("Running Zeroshot Predictions..."):
+            with st.spinner("Running Zero-shot Predictions..."):
                 # Run the command and capture all output
                 process = subprocess.Popen(
                     command,
@@ -605,12 +605,12 @@ def zeroshot_predictions():
                                       unsafe_allow_html=True)
                 
                 if process.returncode == 0:
-                    st.success("✅ Zeroshot predictions completed successfully!")
+                    st.success("✅ Zero-shot predictions completed successfully!")
                 else:
-                    st.error(f"❌ Zeroshot predictions failed with exit code: {process.returncode}")
+                    st.error(f"❌ Zero-shot predictions failed with exit code: {process.returncode}")
 
         except Exception as e:
-            st.error(f"Error during zeroshot predictions: {str(e)}")
+            st.error(f"Error during zero-shot predictions: {str(e)}")
             st.exception(e)
 
 def about():
@@ -627,7 +627,7 @@ def about():
                 
         (c) For the chosen multi-mutants, generate the MULTI-assembly mutagenic oligos for gene synthesis.
                 
-    2. Perform the Protein Language Model Zeroshot Ensemble Approach used in the MULTI-evolve framework.
+    2. Perform the Protein Language Model Zero-shot Ensemble Approach used in the MULTI-evolve framework.
     """)
 
 def main():
@@ -640,7 +640,7 @@ def main():
         "Train Models", 
         "Propose Multi-mutants", 
         "Generate MULTI-assembly Oligos",
-        "Perform PLM Zeroshot Ensemble",
+        "Perform PLM Zero-shot Ensemble",
     ])
     
     with tab5:

@@ -4,7 +4,7 @@ Official repository for MULTI-evolve (model-guided, universal, targeted installa
 
 **The MULTI-evolve Python package has the following uses:**
 
-1. Implement the workflow for the MULTI-evolve framework including: training neural networks, proposing multi-mutants, generating MULTI-assembly mutagenic oligos for gene synthesis of proposed multi-mutants, implementing the language model zeroshot ensemble approach to nominate single mutants to experimentally test.
+1. Implement the workflow for the MULTI-evolve framework including: training neural networks, proposing multi-mutants, generating MULTI-assembly mutagenic oligos for gene synthesis of proposed multi-mutants, implementing the language model zero-shot ensemble approach to nominate single mutants to experimentally test.
 
 3. Streamlined comparison of various data splitting methods, sequence featurizations, and machine learning models.
 
@@ -55,7 +55,7 @@ The workflow for the MULTI-evolve framework is as follows:
 2. Choose the best performing neural network and use it to predict combinatorial variants.
 3. For the chosen multi-mutants, generate the MULTI-assembly mutagenic oligos for gene synthesis.
 
-In certain iterations, the MULTI-evolve framework involves using a protein language model zeroshot ensemble approach to nominate single mutants to evaluate.
+In certain iterations, the MULTI-evolve framework involves using a protein language model zero-shot ensemble approach to nominate single mutants to evaluate.
 
 ### Interactive Web App
 
@@ -74,7 +74,7 @@ See the [Scripts README](scripts/README.md) to learn how to use MULTI-evolve via
 
 ## Training and comparing various machine learning models
 
-The MULTI-evolve package can be used to compare different data splitting methods, sequence featurizations, and machine learning models. In addition, the package can be used to perform zeroshot predictions with protein language models (ESM, ESM-IF). Examples are provided in the ```notebooks/examples``` folder. 
+The MULTI-evolve package can be used to compare different data splitting methods, sequence featurizations, and machine learning models. In addition, the package can be used to perform zero-shot predictions with protein language models (ESM, ESM-IF). Examples are provided in the ```notebooks/examples``` folder. 
 
 ## Contributors
 
