@@ -1,0 +1,27 @@
+# updated 5/21/2025
+name: multievolve
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - tqdm
+  - ipykernel
+  - numpy=1.26
+  - pandas=2.2
+  - matplotlib=3.10
+  - seaborn=0.13
+  - scipy=1.15
+  - biopython=1.85
+  - scikit-learn=1.6
+  - scikit-optimize=0.10
+  - pip:
+      - torch==2.2.2
+      - transformers==4.42.4
+      - wandb==0.19
+      - Levenshtein
+      - streamlit==1.45
+      - fair-esm
+      - biotite==0.41.2
+      - ankh
+      - protobuf

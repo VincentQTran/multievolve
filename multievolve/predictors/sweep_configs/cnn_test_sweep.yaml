@@ -1,0 +1,18 @@
+program: train.py
+method: grid
+metric:
+ name: Test Loss
+ goal: minimize
+parameters:
+ layersize_filtersize:
+   values: ["1-32"]
+ kernel_size:
+   values: [3]
+ learning_rate:
+   values: [0.0001]
+ batch_size:
+   values: [32]
+ optimizer:
+   value: "adam"
+ epochs:
+   value: 300
