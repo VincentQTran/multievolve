@@ -9,7 +9,7 @@ dependencies:
   - ipykernel
   - numpy=1.26
   - pandas=2.2
-  - matplotlib=3.10
+  - matplotlib
   - seaborn=0.13
   - scipy=1.15
   - biopython=1.85

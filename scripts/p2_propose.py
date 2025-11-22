@@ -152,7 +152,7 @@ def main():
     df_mod = pd.concat(df_ls)
 
     ## get mean of test loss, pearson, spearman for each condition
-    data_p1 = df_mod.groupby('condition')[['rank test loss', 'Test Loss', 'Pearson', 'Spearman']].mean().sort_values(by='rank test loss', ascending=True)
+    data_p1 = df_mod.groupby('condition')[['rank test loss', 'Test Loss', 'Pearson - Test', 'Spearman - Test']].mean().sort_values(by='rank test loss', ascending=True)
 
     ## get list of rank test losses for each condition
     data_p2 = df_mod.groupby('condition')[['rank test loss']].agg(list).sort_values(by='rank test loss', key=lambda x: x.map(len), ascending=True)
@@ -210,7 +210,7 @@ def main():
         mutation_pool=mutation_pool)
     proposer.propose(output_df=False)
     proposer.evaluate_proposals()
-    proposer.save_proposals(f'{experiment_name}_proposals_all.csv')
+    proposer.save_proposals(f'{experiment_name}_proposals_all')
 
     # get top n variants per mutational load
     df = proposer.proposals

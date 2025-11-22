@@ -381,7 +381,7 @@ def design_oligos():
         #### Input Files and Parameters:
                     
         - **Protein Name**: Name of the protein to generate oligos for.
-        - **Wildtype DNA Sequence FASTA**: DNA sequence of the wildtype protein with overhangs for MULTI-assembly. The sequence should include overhangs for the MULTI-assembly oligos, wherein the overhangs are the same length on both ends of the DNA sequence. Recommended overhang length is 33 bp or longer. An example is found in ```data/example_protein/APEX_33overhang.fasta```.
+        - **Wildtype DNA Sequence FASTA**: DNA sequence of the wildtype protein with overhangs from the protein's MULTI-assembly vector. The sequence should include overhangs for the MULTI-assembly oligos, wherein the overhangs are the same length on both ends of the DNA sequence. Recommended overhang length is 33 bp or longer. An example is found in ```data/example_protein/APEX_33overhang.fasta```.
         - **Mutations File (CSV)**: List of proposed variants to generate oligos for. It is a one column no-header csv file with the variants. See ```data/example_protein/MULTI-assembly_input.csv``` for an example of the csv format.
         - **Species**: Codon usage table selection (human/ecoli/yeast).
         - **Melting Temperature**: Target Tm for oligos (recommended: 80°C).

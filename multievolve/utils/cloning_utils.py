@@ -10,7 +10,6 @@ import os
 from Bio import Align, SeqIO
 from Bio.Seq import Seq
 from Bio.SeqUtils import MeltingTemp as mt
-import matplotlib.pyplot as plt
 from Bio.SeqRecord import SeqRecord
 from typing import Optional, Tuple
 
